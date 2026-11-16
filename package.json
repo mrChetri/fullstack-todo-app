@@ -1,0 +1,16 @@
+{
+  "name": "fullstack-todo-app",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "test:server": "npm --prefix server test -- --run",
+    "test:client": "npm --prefix client test",
+    "test": "npm run test:server && npm run test:client",
+    "typecheck:server": "npm --prefix server run typecheck",
+    "typecheck:client": "npm --prefix client run typecheck",
+    "typecheck": "npm run typecheck:server && npm run typecheck:client"
+  }
+}
